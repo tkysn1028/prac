@@ -1,0 +1,151 @@
+⓪URL入力
+①
+・"/"のgetをhomeメソッドが受け取る
+・ユーザー情報（ユーザー名、最高得点(string)）クラス（User）のインスタンス化　モデルに入れる
+・index.htmlを返す
+②index.html
+・webサイトの説明
+・得点の計算方法
+・タイマーの説明
+・注意事項
+・題材の説明　５題出すよ
+
+
+class QuizController()にコントローラはまとめる
+フィールド：初回アクセスかどうかフィールド。boolean existsUserの初期値false
+
+
+
+③postコントローラ
+・バリデーションチェック（ユーザーが新規登録か2回目以降か）
+
+boolean f =（DBに値が存在するかチェックのメソッドでtruefalse）
+
+SQL:
+select * from m_user where user_name = （入力された値）→どう受け取るか？の処理をヨウさん実装
+
+if(2回目以降アクセス){
+
+existsUserの値をtrueに
+
+・DBから最高得点取ってきて、userクラスに入れる
+
+・DBからユーザー名を取ってきて、userクラスに入れる
+modelにuserクラスを入れて、quiz.htmlに飛ばす
+
+}else（初回あくセス）{
+・userクラスのユーザー名に入力値を入れる
+・""を最高得点に入れる
+
+modelに入れて、quiz.htmlに飛ばす
+}
+
+・バリデーションチェック（ユーザー名が空欄）
+JavaScriptを使って遷移しないようにする（苑さん）
+
+
+・問題(Question)クラス（問題、選択肢4つ、正解の選択肢）のリストを作る
+select * from m_question where id between 数字 and 数字
+prepareQuestion	メソッド用意
+new random.nextint
+ヨウさん実装予定
+
+
+④quiz画面(quiz.html)
+username,highscore:②で来ている
+問題リスト：②できている
+かかった時間：ヨウさん実装
+選択肢をランダムに表示　苑
+問題の順番をランダムに表示　苑
+値が空欄だった場合の処理　苑
+
+
+
+提出→バリデーションチェック（苑）→OKならpost要求"/calculateScore"
+戻る→get要求"/"
+
+
+
+
+
+⑤post "/calculateScore"　メソッド名：calculateScore()
+
+
+
+・得点の計算方法はプログラムを動かすタイミングで考える。
+ひとまず：
+10秒につき-5ポイント
+100点満点
+５題出して1題20点
+
+繰り返し{
+int count;
+
+if(選択された内容 = DBの正解){
+count += 20
+}
+
+戻ってきたタイマーが35秒だった
+
+35/10(int) = 3　→　3 * 5→count -= 3*5
+}
+
+
+・初回登録かどうかでDBに実行させるSQLが変わるので分岐　existsUserのtrue/falseで分ける
+1	初回：
+	insert into m_user value(user_name,user_highestScore) (入力値,count)
+2	2回目以降
+	if(count > DBの最高得点データ){
+	update m_user set user_highestScore = count where user_name = 入力値
+	userクラスの最高得点にcountをセット
+	}
+
+今回の得点、かかった時間、最高得点が入った得点＆時間(Result)クラスを作成
+
+今回の得点：count
+かかった時間：タイマーの値
+最高得点：userクラスから取った値
+
+modelにresultクラスを追加
+
+・resultに表示
+
+modelのresultクラスの内容表示
+
+スタート画面に戻る→getの"/"を送る
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
