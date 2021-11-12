@@ -13,7 +13,9 @@
 
 
 class QuizController()にコントローラはまとめる
-フィールド：初回アクセスかどうかフィールド。boolean existsUserの初期値false
+フィールド：以前アクセスしたどうか判定するフィールド。boolean existsUserの初期値false
+フィールド：別ページにアクセスしているかどうかを判定するフィールド　defaultはfalse
+
 
 
 
