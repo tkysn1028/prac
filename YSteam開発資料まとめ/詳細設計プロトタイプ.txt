@@ -1,6 +1,7 @@
 ⓪URL入力
 ①
 ・"/"のgetをhomeメソッドが受け取る
+・アクセスしたかどうかの変数（isAccessed)をtrueにする
 ・ユーザー情報（ユーザー名、最高得点(string)）クラス（User）のインスタンス化　モデルに入れる
 ・index.htmlを返す
 ②index.html
@@ -16,7 +17,8 @@ class QuizController()にコントローラはまとめる
 
 
 
-③postコントローラ
+③postコントローラ(
+
 ・バリデーションチェック（ユーザーが新規登録か2回目以降か）
 
 boolean f =（DBに値が存在するかチェックのメソッドでtruefalse）
@@ -65,7 +67,7 @@ username,highscore:②で来ている
 戻る→get要求"/"
 
 
-
+	
 
 
 ⑤post "/calculateScore"　メソッド名：calculateScore()
@@ -100,7 +102,7 @@ count += 20
 	userクラスの最高得点にcountをセット
 	}
 
-今回の得点、かかった時間、最高得点が入った得点＆時間(Result)クラスを作成
+今回の得点、かかった時間、最高得点、正答数、が入った得点＆時間(Result)クラスを作成
 
 今回の得点：count
 かかった時間：タイマーの値
@@ -113,12 +115,6 @@ modelにresultクラスを追加
 modelのresultクラスの内容表示
 
 スタート画面に戻る→getの"/"を送る
-
-
-
-
-
-
 
 
 
