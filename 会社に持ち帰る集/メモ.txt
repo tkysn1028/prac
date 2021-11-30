@@ -1,0 +1,52 @@
+実際あるファイルをいじろうとすると大変。
+
+コピーとって一から自分で書き直してみる方が構造もわかってややこしくならないけど時間がかかる。
+
+遷移時に他のランキングが見れなくするのはない視点だった。発見！
+
+ｈｔｍｌからjavascriptを読み込むやり方が思いつかなかった。
+
+
+gips-sono@outlook.jp
+↓要らない
+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
+
+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
+
+
+jquery
+javascriptライブラリより容易に記述するために使う
+
+セレクタメソッドイベントに分かれる。
+
+ソースコード
+
+リーダブルコード
+
+同じコードを書かない
+全く同じなのか微妙に違うのか分からない可能性が出てくるため、
+
+keep it simple stupid
+構造はシンプルに
+
+頭でっかちなエンジニア
+メンテしにくい
+
+設定 (Set-Up)
+研修を通じた技術習得
+HTML　Javascriptの基本的な使い方
+チーム開発のノウハウ習得
+jQuery少し学習
+
+対立 (Confrontation)
+コーディングしてみると見にくいコードしか書けない
+分岐処理に同じ内容を重複して記述
+javascriptとjavaの違いに手間取った
+解決 (Resolution)
+keep it simple stupid
+同じコードを書かない
+短いコードがいいソースコードとは限らない
+リーダブルコードを読んでおく
+JavaとJavacriptの違いだと、調べながらでも結構何とかなる。あとはロジック。
+
+
